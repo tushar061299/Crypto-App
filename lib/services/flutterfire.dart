@@ -34,6 +34,17 @@ Future<bool> registerIn(String email, String password) async {
   }
 }
 
+Future<bool> removeCoin(String id) async {
+  String uid = FirebaseAuth.instance.currentUser!.uid;
+  FirebaseFirestore.instance
+      .collection('Users')
+      .doc(uid)
+      .collection('Coins')
+      .doc(id)
+      .delete();
+  return true;
+}
+
 Future<bool> addCoin(String id, String amount) async {
   try {
     String uid = FirebaseAuth.instance.currentUser!.uid;

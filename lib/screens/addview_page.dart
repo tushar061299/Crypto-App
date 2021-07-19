@@ -13,6 +13,8 @@ class _AddViewState extends State<AddView> {
     "bitcoin",
     "tether",
     "ethereum",
+    "cardano",
+    "polkadot",
   ];
 
   String dropdownValue = "bitcoin";
