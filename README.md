@@ -10,10 +10,12 @@
 # 4)Latest News of Coin Market using API.    
 
 **Screenshots**
-![](lib/images/Login.jpg)
-![](lib/images/Price%20Tracker.jpg)
-![](lib/images/News.jpg)
-![](lib/images/Wallet.jpg)
-![](lib/images/Wallet%202.jpg)
+
+<img src="lib/images/Login.jpg" width="200"  > "  " <img src="lib/images/Price%20Tracker.jpg" width="200"  >
+
+<img src="lib/images/News.jpg" width="200"  > "    "<img src="lib/images/Wallet.jpg" width="200"  >
+
+<img src="lib/images/Wallet%202.jpg" width="200"  >
+
 
 # Crypto-App
