@@ -1,3 +1,4 @@
+import 'package:crypto_app/screens/article_view.dart';
 import 'package:flutter/material.dart';
 
 class NewsTile extends StatelessWidget {
@@ -14,17 +15,18 @@ class NewsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //         builder: (context) => ArticleView(
-        //               postUrl: posturl,
-        //             )));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ArticleView(
+                      postUrl: posturl,
+                    )));
       },
       child: Container(
           // ignore: prefer_const_constructors
           margin: EdgeInsets.only(bottom: 24),
           width: MediaQuery.of(context).size.width,
+          // ignore: avoid_unnecessary_containers
           child: Container(
             child: Container(
               // ignore: prefer_const_constructors
@@ -42,14 +44,29 @@ class NewsTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
-                      child: Image.network(
-                        imgUrl,
-                        height: 200,
-                        width: MediaQuery.of(context).size.width,
-                        fit: BoxFit.cover,
-                      )),
+                  // ignore: unnecessary_null_comparison
+                  imgUrl != null
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: Image.network(
+                            imgUrl,
+                            height: 200,
+                            width: MediaQuery.of(context).size.width,
+                            fit: BoxFit.cover,
+                          ))
+                      : Container(
+                          height: 200.0,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            // ignore: prefer_const_constructors
+                            image: DecorationImage(
+                                // ignore: prefer_const_constructors
+                                image: NetworkImage(
+                                    'https://source.unsplash.com/weekly?coding'),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(12.0),
+                          ),
+                        ),
                   // ignore: prefer_const_constructors
                   SizedBox(
                     height: 12,
@@ -71,7 +88,7 @@ class NewsTile extends StatelessWidget {
                     desc,
                     maxLines: 2,
                     // ignore: prefer_const_constructors
-                    style: TextStyle(color: Colors.white12, fontSize: 14),
+                    style: TextStyle(color: Colors.white38, fontSize: 14),
                   )
                 ],
               ),

@@ -14,6 +14,7 @@ class _HomeState extends State<Home> {
 
   final _pageOptions = [
     MarketPage(),
+    // ignore: prefer_const_constructors
     NewsPage(),
     HomePage(),
   ];
