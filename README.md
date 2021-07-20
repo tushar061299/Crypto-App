@@ -10,6 +10,10 @@
 # 4)Latest News of Coin Market using API.    
 
 **Screenshots**
-
+![](lib/images/Login.jpg)
+![](lib/images/Price%20Tracker.jpg)
+![](lib/images/News.jpg)
+![](lib/images/Wallet.jpg)
+![](lib/images/Wallet%202.jpg)
 
 # Crypto-App
