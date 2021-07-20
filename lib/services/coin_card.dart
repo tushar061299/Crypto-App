@@ -82,6 +82,7 @@ class CoinCard extends StatelessWidget {
               ),
             ),
             Expanded(
+              // ignore: avoid_unnecessary_containers
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -124,9 +125,10 @@ class CoinCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    change.toDouble() < 0
-                        ? change.toDouble().toStringAsFixed(2)
-                        : '+' + change.toDouble().toStringAsFixed(2),
+                    "24h: " +
+                        (change.toDouble() < 0
+                            ? change.toDouble().toStringAsFixed(2)
+                            : '+' + change.toDouble().toStringAsFixed(2)),
                     style: TextStyle(
                       color: change.toDouble() < 0 ? Colors.red : Colors.green,
                       fontSize: 18,
@@ -134,11 +136,13 @@ class CoinCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    changePercentage.toDouble() < 0
-                        ? changePercentage.toDouble().toStringAsFixed(2) + '%'
-                        : '+' +
-                            changePercentage.toDouble().toStringAsFixed(2) +
-                            '%',
+                    "24h: " +
+                        (changePercentage.toDouble() < 0
+                            ? changePercentage.toDouble().toStringAsFixed(2) +
+                                '%'
+                            : '+' +
+                                changePercentage.toDouble().toStringAsFixed(2) +
+                                '%'),
                     style: TextStyle(
                       color: changePercentage.toDouble() < 0
                           ? Colors.red

@@ -29,9 +29,12 @@ class _MarketPageState extends State<MarketPage> {
             coinList.add(Coin.fromJson(map));
           }
         }
-        setState(() {
-          coinList;
-        });
+        if (mounted) {
+          setState(() => coinList);
+        }
+        // setState(() {
+        //   coinList;
+        // });
       }
       return coinList;
     } else {
@@ -39,15 +42,11 @@ class _MarketPageState extends State<MarketPage> {
     }
   }
 
-  Future<void> _onRefresh(BuildContext context) async {
-    fetchCoin();
-  }
-
   @override
   void initState() {
     fetchCoin();
     // ignore: prefer_const_constructors
-    Timer.periodic(Duration(seconds: 2), (timer) => fetchCoin());
+    Timer.periodic(Duration(seconds: 10), (timer) => fetchCoin());
     super.initState();
   }
 
@@ -67,7 +66,7 @@ class _MarketPageState extends State<MarketPage> {
           ),
         ),
         body: RefreshIndicator(
-          onRefresh: () => _onRefresh(context),
+          onRefresh: () => fetchCoin(),
           child: ListView.builder(
             scrollDirection: Axis.vertical,
             itemCount: coinList.length,

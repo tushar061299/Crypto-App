@@ -53,6 +53,18 @@ class _HomePageState extends State<HomePage> {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        // ignore: prefer_const_constructors
+        title: Text(
+          'Wallet',
+          // ignore: prefer_const_constructors
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           color: Colors.black12,
@@ -82,12 +94,31 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.all(15.0),
                       // ignore: avoid_unnecessary_containers
                       child: Container(
-                        width: MediaQuery.of(context).size.width / 1.2,
-                        height: MediaQuery.of(context).size.height / 14,
+                        height: 60,
+                        width: 60,
                         // ignore: prefer_const_constructors
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          color: Colors.white,
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(20),
+                          // ignore: prefer_const_literals_to_create_immutables
+                          boxShadow: [
+                            // ignore: prefer_const_constructors
+                            BoxShadow(
+                              color: Colors.grey.shade500,
+                              // ignore: prefer_const_constructors
+                              offset: Offset(4, 4),
+                              blurRadius: 10,
+                              spreadRadius: 1,
+                            ),
+                            // ignore: prefer_const_constructors
+                            BoxShadow(
+                              color: Colors.white38,
+                              // ignore: prefer_const_constructors
+                              offset: Offset(-4, -4),
+                              blurRadius: 10,
+                              spreadRadius: 1,
+                            ),
+                          ],
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
