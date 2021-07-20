@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-# crypto_app
 
-A new Flutter project.
+# Crypto_app
+ It is all in one app for price tracking, news and maintaing your wallet.
+ App Made using latest Technologies like Flutter, Firebase, and Rest Api. 
 
-## Getting Started
+#  Key Points
+# 1)Firebase Authentication.
+# 2)Wallet To Maintain Your Cryptocurrency Holdings using Firebase.
+# 3)Price Tracker of all the Crypto currencies using API.
+# 4)Latest News of Coin Market using API.    
 
-This project is a starting point for a Flutter application.
+**Screenshots**
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
 # Crypto-App
->>>>>>> 86f5588821c1d3a410fafb8341d3b9e17aa647a0
