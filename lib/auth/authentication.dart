@@ -1,4 +1,4 @@
-import 'package:crypto_app/screens/home_page.dart';
+import 'package:crypto_app/home.dart';
 import 'package:crypto_app/services/flutterfire.dart';
 import 'package:flutter/material.dart';
 
@@ -112,7 +112,7 @@ class _AuthenticationState extends State<Authentication> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(),
+                        builder: (context) => Home(),
                       ),
                     );
                   }
@@ -137,7 +137,7 @@ class _AuthenticationState extends State<Authentication> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => HomePage(),
+                        builder: (context) => Home(),
                       ),
                     );
                   }

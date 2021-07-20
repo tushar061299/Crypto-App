@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                               // ignore: prefer_const_constructors
                               icon: Icon(
                                 Icons.close,
-                                color: Colors.blue,
+                                color: Colors.green[800],
                               ),
                             )
                           ],
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
           Icons.add,
           color: Colors.white,
         ),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.greenAccent,
       ),
     );
   }
