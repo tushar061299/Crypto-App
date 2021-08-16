@@ -1,6 +1,6 @@
 
 # Crypto_app
- It is all in one app for price tracking, news and maintaing your wallet.
+ It is all in one app for price tracking, news and maintaining your wallet.
  App Made using latest Technologies like Flutter, Firebase, and Rest Api. 
 
 #  Key Points
